@@ -1,6 +1,7 @@
 #include <glut.h>  
 #include <stdlib.h>  
 //<<<<<<<<<<<<<<<<<<< axis >>>>>>>>>>>>>>
+//è®¡ç®—æœºå›¾å½¢å­¦çš„ä»£ç 
 
 static GLfloat spin = 0.0;
 static GLfloat spin1 = 0.0;
@@ -45,7 +46,7 @@ void myinit(void)
 	//glEnable(GL_DEPTH_TEST);
 
 }
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<< displayWire >>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<00000<<<< displayWire >>>>>>>>>>>>>>>>>>>>>>
 void displayWire(void)
 {
 	//glEnable(GL_CULL_FACE);
@@ -126,14 +127,14 @@ void spinDisplay(void)
 	spin = spin + 0.1;
 	if (spin > 360.0)
 		spin = 0;
-	glutPostRedisplay();  //ÆÁÄ»ÖØ»æ
+	glutPostRedisplay();  //å±å¹•é‡ç»˜
 }
 void spinDisplay1(void)
 {
 	spin1 = spin1 + 0.1;
 	if (spin1 > 360.0)
 		spin1 = 0;
-	glutPostRedisplay();  //ÆÁÄ»ÖØ»æ
+	glutPostRedisplay();  //å±å¹•é‡ç»˜
 }
 void mouse(int button, int state, int x, int y)
 {
@@ -141,7 +142,7 @@ void mouse(int button, int state, int x, int y)
 	case GLUT_LEFT_BUTTON:
 		if (state == GLUT_DOWN)
 		{
-			//glutIdleFunc(spinDisplay);  //Éè±¸¿ÕÏĞÊ±µ÷ÓÃµÄº¯Êı
+			//glutIdleFunc(spinDisplay);  //è®¾å¤‡ç©ºé—²æ—¶è°ƒç”¨çš„å‡½æ•°
 			//glutIdleFunc(spinDisplay1);
 		}
 
@@ -165,7 +166,7 @@ void main(int argc, char **argv)
 	glutCreateWindow("Transformation Test - wireframes");
 	glutDisplayFunc(displayWire);
 	//glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // background is white
-	glutMouseFunc(mouse);  //×¢²áÊó±ê¶¯×÷º¯Êı
+	glutMouseFunc(mouse);  //æ³¨å†Œé¼ æ ‡åŠ¨ä½œå‡½æ•°
 	myinit();
 	glEnable(GL_NORMALIZE);
 	glutMainLoop();
